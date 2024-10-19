@@ -1,0 +1,3 @@
+D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/03-Cfg/CSWC_cfg.c
+D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/04-Src/CSWC_prg.c
+D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/02-Stub/main.c
