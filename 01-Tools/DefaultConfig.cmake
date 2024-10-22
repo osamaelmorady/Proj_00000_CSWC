@@ -155,25 +155,25 @@ endif()
 
 
 
-######################################## $CUSTOM_C_FLAGS check   #######################################
+######################################## $PROJECT_CUSTOM_C_FLAGS check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED CUSTOM_C_FLAGS)
-    set(CUSTOM_C_FLAGS )            
+if (NOT DEFINED PROJECT_CUSTOM_C_FLAGS)
+    set(PROJECT_CUSTOM_C_FLAGS )            
 endif()
-######################################## $CUSTOM_CXX_FLAGS check   #######################################
+######################################## $PROJECT_CUSTOM_CXX_FLAGS check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED CUSTOM_CXX_FLAGS)
-    set(CUSTOM_CXX_FLAGS )            
+if (NOT DEFINED PROJECT_CUSTOM_CXX_FLAGS)
+    set(PROJECT_CUSTOM_CXX_FLAGS )            
 endif()
-######################################## $CUSTOM_ASM_FLAGS check   #######################################
+######################################## $PROJECT_CUSTOM_ASM_FLAGS check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED CUSTOM_ASM_FLAGS)
-    set(CUSTOM_ASM_FLAGS )            
+if (NOT DEFINED PROJECT_CUSTOM_ASM_FLAGS)
+    set(PROJECT_CUSTOM_ASM_FLAGS )            
 endif()
-######################################## $CUSTOM_LINKER_FLAGS check   #######################################
+######################################## $PROJECT_CUSTOM_LINKER_FLAGS check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED CUSTOM_LINKER_FLAGS)
-    set(CUSTOM_LINKER_FLAGS )            
+if (NOT DEFINED PROJECT_CUSTOM_LINKER_FLAGS)
+    set(PROJECT_CUSTOM_LINKER_FLAGS )            
 endif()
 
 

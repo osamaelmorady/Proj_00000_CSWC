@@ -68,21 +68,23 @@ target_include_directories(${PROJECT_TARGET} PUBLIC ${PROJECT_ALL_INCLUDE_DIRS} 
 target_compile_options(${PROJECT_TARGET} PRIVATE 
          $<$<COMPILE_LANGUAGE:${PROJECT_LANGUAGE}>:${CUSTOM_${PROJECT_LANGUAGE}_FLAGS}
          ${PROJECT_DEFAULT_${PROJECT_LANGUAGE}_FLAGS}>
-         $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}> 
+         $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}> 
          )
 
 
 
-target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${CUSTOM_LINKER_FLAGS} ${PROJECT_DEFAULT_LINK_FLAGS} )
+target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${PROJECT_CUSTOM_LINKER_FLAGS} ${PROJECT_DEFAULT_LINK_FLAGS} -T ${PROJECT_LINKER_FOLDER_DIR}/${PROJECT_LINKER_FILE})
 	
 
-# ##################################################################################################################################################################
-# ##################################################################################################################################################################
-# ##################################################################################################################################################################
 
 
-# ############################# Set Microcontroller ########################
-# set(CMAKE_SYSTEM_PROCESSOR          ${MICROCONTROLLER})
+
+
+
+
+# ##################################################################################################################################################################
+# ##################################################################################################################################################################
+# ##################################################################################################################################################################
 
 
 # ############################# Set Architecture ########################
@@ -93,11 +95,11 @@ target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${CUSTOM_LINKER_FLAGS} ${PR
 
 #         ### compile
 #         if (PROJECT_LANGUAGE STREQUAL "C")
-#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#             $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
+#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
+#             $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
 #         elseif (PROJECT_LANGUAGE STREQUAL "CXX")
-#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_CXX_FLAGS} ${PROJECT_DEFAULT_CXX_FLAGS}>
-#             $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
+#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_CXX_FLAGS} ${PROJECT_DEFAULT_CXX_FLAGS}>
+#             $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
 #         else()
 #             message(FATAL_ERROR " xxx  ${PROJECT_LANGUAGE} is not supported  xxx  ")
 #         endif()
@@ -108,14 +110,14 @@ target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${CUSTOM_LINKER_FLAGS} ${PR
 #         elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
 #             set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
 #         endif()
-#         target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${CUSTOM_LINKER_FLAGS} ${LINKER_FILE_CFG_PAR} -T ${PROJECT_LINKER_FOLDER_DIR}/${LINKER_FILE})
+#         target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${PROJECT_CUSTOM_LINKER_FLAGS} ${LINKER_FILE_CFG_PAR} -T ${PROJECT_LINKER_FOLDER_DIR}/${PROJECT_LINKER_FILE})
 
 # elseif(${ARCHITECTURE} STREQUAL "GENERIC")
 
 #     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".${DEFAULT_HEX_SUFFUX}")
     
-#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#     # $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
+#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
+#     # $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
 #     # )
     
 #     set (OBJCPY ${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX})
@@ -135,8 +137,8 @@ target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${CUSTOM_LINKER_FLAGS} ${PR
 
 #     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".${DEFAULT_HEX_SUFFUX}" SUFFIX ".${DEFAULT_OUT_SUFFIX}")
 
-#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#     # $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
+#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
+#     # $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
 #     # )
 
 #     set (OBJCPY ${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX} ${PROJECT_NAME}.${DEFAULT_OUT_SUFFIX})
@@ -154,4 +156,5 @@ target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${CUSTOM_LINKER_FLAGS} ${PR
 # else()
 #     message(FATAL_ERROR "")    
 # endif()
+
 
