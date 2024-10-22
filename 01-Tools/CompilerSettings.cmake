@@ -205,24 +205,17 @@ endif()
 
 ##### Flags set
 if(${COMPILER_TYPE} STREQUAL "WINDOWS")
-   #  set(PROJECT_DEFAULT_C_FLAGS   -c  -o -I${PROJECT_ALL_SOURCE_FILES} -Wall -g)
-   #  set(PROJECT_DEFAULT_CXX_FLAGS  -g -o -Wall )
-   #  set(PROJECT_DEFAULT_ASM_FLAGS -S)
-    set(DEFAULT_LINK_FLAGS_DEBUG -Wl,--no-as-needed)
-    set(DEFAULT_LINK_FLAGS_RELEASE -Wl,--no-as-needed)
+    set(PROJECT_DEFAULT_C_FLAGS  -g -Wall -Wextra -shared )
+    set(PROJECT_DEFAULT_CXX_FLAGS -g -Wall -Wextra -shared )
+    set(PROJECT_DEFAULT_ASM_FLAGS -S -g -Wall -Wextra)
+    set(DEFAULT_LINK_FLAGS_DEBUG -g -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)
+    set(DEFAULT_LINK_FLAGS_RELEASE -g -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)
 
-elseif(${COMPILER_TYPE} STREQUAL "GENERIC")
-    set(PROJECT_DEFAULT_C_FLAGS  -g -c -o -Wall -I. -I${PROJECT_ALL_SOURCE_FILES})
-    set(PROJECT_DEFAULT_CXX_FLAGS  -g -o -Wall -I. -I${PROJECT_ALL_SOURCE_FILES})
-    set(PROJECT_DEFAULT_ASM_FLAGS -S)
-    set(DEFAULT_LINK_FLAGS_DEBUG -Wl,–verbose -Wl,–print-memory-usage -Wl,-s -Wl,–subsystem,console -nostartfiles -nostdlib -nodefaultlibs -Wl,-Map=${PROJECT_NAME}.map -Wl,T${PROJECT_LINKER_FOLDER_DIR}/${LINKER_FILE})
-    set(DEFAULT_LINK_FLAGS_RELEASE )
-    set(LINKER_FILE_CFG_PAR )
 elseif(${COMPILER_TYPE} STREQUAL "GCC-AVR")
-    set(PROJECT_DEFAULT_C_FLAGS -E -C -G --silent)
-    set(PROJECT_DEFAULT_ASM_FLAGS -C -G )
-    set(DEFAULT_LINK_FLAGS_DEBUG -C -G -f --map ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.map )
-    set(DEFAULT_LINK_FLAGS_RELEASE -C -G -f --map ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.map )
+    set(PROJECT_DEFAULT_C_FLAGS -g -Wall -Wextra -shared )
+    set(PROJECT_DEFAULT_ASM_FLAGS  -g -Wall -Wextra -shared )
+    set(DEFAULT_LINK_FLAGS_DEBUG -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)
+    set(DEFAULT_LINK_FLAGS_RELEASE -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)
     set(LINKER_FILE_CFG_PAR --config)
 elseif(${COMPILER_TYPE} STREQUAL "GCC-RL78")
     set(PROJECT_DEFAULT_C_FLAGS -E -C -G --silent)
@@ -231,10 +224,13 @@ elseif(${COMPILER_TYPE} STREQUAL "GCC-RL78")
     set(DEFAULT_LINK_FLAGS_RELEASE -C -G -f --map ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.map )
     set(    LINKER_FILE_CFG_PAR --config)
 elseif(${COMPILER_TYPE} STREQUAL "GCC-ARM")
-    set(PROJECT_DEFAULT_C_FLAGS -std=gnu99 -g -o -Wall )
-    set(PROJECT_DEFAULT_ASM_FLAGS -S)
-    set(DEFAULT_LINK_FLAGS_DEBUG -f -g -Wl,--whole-archive  -Wl,--no-whole-archive -o)
-    set(DEFAULT_LINK_FLAGS_RELEASE -f -g -Wl,--whole-archive  -Wl,--no-whole-archive -o)
+   set(PROJECT_DEFAULT_C_FLAGS  -g -Wall -Wextra -shared )
+   set(PROJECT_DEFAULT_CXX_FLAGS -g -Wall -Wextra -shared )
+   set(PROJECT_DEFAULT_ASM_FLAGS -S -g -Wall -Wextra)
+   set(DEFAULT_LINK_FLAGS_DEBUG -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)
+   set(DEFAULT_LINK_FLAGS_RELEASE -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)
+
+   #  set(DEFAULT_LINK_FLAGS_RELEASE -f -Wl,--whole-archive  -Wl,--no-whole-archive)
 set(LINKER_FILE_CFG_PAR )
 elseif(${COMPILER_TYPE} STREQUAL "IAR")
     message(FATAL_ERROR "COMPILER_TYPE : Not Supported")
@@ -257,91 +253,6 @@ endif()
 
 
 
-# ##### Output set
-# set(DEFAULT_EXECUTABLE_SUFFIX        "exe")
-# set(DEFAULT_OUT_SUFFIX        "out")
-# set(DEFAULT_HEX_SUFFUX        "hex")
-# set(DEFAULT_ELF_SUFFUX        "elf")
-
-
 	
 
-# ##################################################################################################################################################################
-# ##################################################################################################################################################################
-# ##################################################################################################################################################################
-
-
-# ############################# Set Microcontroller ########################
-# set(CMAKE_SYSTEM_PROCESSOR          ${MICROCONTROLLER})
-
-
-# ############################# Set Architecture ########################
-# if(${ARCHITECTURE} STREQUAL "WINDOWS" AND PROJECT_ALL_SOURCE_FILES)
-
-#         ### include directories
-#         target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_ALL_INCLUDE_DIRS} PRIVATE ${PROJECT_COMPILER_INCLUDES})
-
-#         ### compile
-#         if (PROJECT_LANGUAGE STREQUAL "C")
-#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#             $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
-#         elseif (PROJECT_LANGUAGE STREQUAL "CXX")
-#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_CXX_FLAGS} ${PROJECT_DEFAULT_CXX_FLAGS}>
-#             $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
-#         else()
-#             message(FATAL_ERROR " xxx  ${PROJECT_LANGUAGE} is not supported  xxx  ")
-#         endif()
-
-#         ### link
-#         if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
-#             set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
-#         elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-#             set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
-#         endif()
-#         target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${CUSTOM_LINKER_FLAGS} ${LINKER_FILE_CFG_PAR} -T ${PROJECT_LINKER_FOLDER_DIR}/${LINKER_FILE})
-
-# elseif(${ARCHITECTURE} STREQUAL "GENERIC")
-
-#     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".${DEFAULT_HEX_SUFFUX}")
-    
-#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#     # $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
-#     # )
-    
-#     set (OBJCPY ${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX})
-#     set(POST_BUILD_COMMAND ${OBJCPY} -O ihex  ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX} -O binary  ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.bin)
-
-
-#     # set(CMAKE_C_RESPONSE_FILE_LINK_FLAG "-f ")
-#     set(CMAKE_C_COMPILE_OBJECT "<CMAKE_C_COMPILER> <DEFINES> <INCLUDES> <FLAGS>  -o <OBJECT> -c <SOURCE>")
-#     set(OBJECTS ${OBJECTS})
-#     if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
-#     elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
-#     endif()
-#     target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${CUSTOM_LINK_FLAGS} ${LINKER_FILE_CFG_PAR} ${PROJECT_LINKER_FOLDER_DIR}/${LNKFILENAME}) 
-# elseif(${ARCHITECTURE} STREQUAL "ARM")
-
-#     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".${DEFAULT_HEX_SUFFUX}" SUFFIX ".${DEFAULT_OUT_SUFFIX}")
-
-#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#     # $<$<COMPILE_LANGUAGE:ASM>:${CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
-#     # )
-
-#     set (OBJCPY ${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX} ${PROJECT_NAME}.${DEFAULT_OUT_SUFFIX})
-#     set(POST_BUILD_COMMAND ${${ELF_TOOL}} -O --verbose ihex  ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX})
-
-#     # set(CMAKE_C_RESPONSE_FILE_LINK_FLAG "-f ")
-#     set(CMAKE_C_COMPILE_OBJECT "<CMAKE_C_COMPILER> <DEFINES> <INCLUDES> <FLAGS>  -o <OBJECT> -c <SOURCE>")
-#     set(OBJECTS ${OBJECTS})
-#     if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
-#     elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
-#     endif()
-#     target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${CUSTOM_LINK_FLAGS} ${LINKER_FILE_CFG_PAR} ${PROJECT_LINKER_FOLDER_DIR}/${LNKFILENAME}) 
-# else()
-#     message(FATAL_ERROR "")    
-# endif()
 
