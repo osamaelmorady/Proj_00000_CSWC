@@ -1,7 +1,0 @@
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/03-Cfg/CSWC_cfg.h
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/04-Src/CSWC_int.h
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/04-Src/CSWC_priv.h
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/03-Cfg/HFIC_CSWC_cfg.h
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/03-Cfg/LFIC_CSWC_cfg.h
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/03-Cfg/MFIC_CSWC_cfg.h
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/03-Cfg/SFIC_CSWC_cfg.h

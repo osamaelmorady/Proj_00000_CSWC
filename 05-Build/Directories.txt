@@ -1,5 +1,0 @@
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/01-Dep
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/02-Stub
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/03-Cfg
-D:/Git_Projects/project_0001_0000_CSWC/01-Tools/../02-Source/04-Src
