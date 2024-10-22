@@ -60,8 +60,8 @@ set(CMAKE_FLASH_TOOL_TYPE "GDB")
 
 
 ###############  Set Compiler Flags ############### 
-set(PROJECT_CUSTOM_C_FLAGS -fno-exception -mmcu=$(MCU) -DF_CPU=$(F_CPU)UL -DBAUD=$(BAUD)  -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
-set(PROJECT_CUSTOM_CXX_FLAGS -fno-exceptions -mmcu=$(MCU) -DF_CPU=$(F_CPU)UL -DBAUD=$(BAUD)  -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
+set(PROJECT_CUSTOM_C_FLAGS  -mmcu=$(MCU) -fno-exception -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
+set(PROJECT_CUSTOM_CXX_FLAGS  -mmcu=$(MCU) -fno-exceptions -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
 set(PROJECT_CUSTOM_ASM_FLAGS )
 set(PROJECT_CUSTOM_LINKER_FLAGS -ffunction-sections  -fsigned-char -fdata-sections -flto -Wall -Xlinker --gc-sections -lole32 -ladvapi32)
 

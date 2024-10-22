@@ -6,28 +6,38 @@
 
 #include "CSWC_int.hpp"
 
-using namespace std;
+// using namespace std;
 
 
 
-volatile int x = 0 ;
+int C_Var = 0 ;
+int CPP_Var = 0 ;
 
 int main(void)
 {
 
 
-	printf ("hello C Programming!") ;
+	scanf("%d", &C_Var) ;
+
+	for (int i=0;i<C_Var;i++)
+	{
+		printf ("hello C Programming! %d  \n",C_Var) ;
+	}
+
+
+	std::cin >> CPP_Var ;
+
+	for (int i=0;i<CPP_Var;i++)
+	{
+		std::cout<<"hello C++ Programming! "<<CPP_Var<< "  "<<std::endl;
+	}
 
 
 
-	std::cin>>x ;
-	std::cout<<"hello C++ Programming!";
+	std::system("pause\n");  // Pause program to see the output (Windows)
 
 
-	std::system("pause");  // Pause program to see the output (Windows)
-
-
-	while(1) ;
+	// while(1) ;
 
 	return 0;
 }
