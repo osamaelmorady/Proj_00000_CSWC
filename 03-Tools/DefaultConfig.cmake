@@ -77,7 +77,7 @@ endif()
 ######################################## $MICROCONTROLLER check   #######################################
 ###  Set Microcontroller Specs
 if (NOT DEFINED MICROCONTROLLER)
-    set(MICROCONTROLLER "WINDOWS")
+    set(MICROCONTROLLER "")
     message(WARNING " !!!  MICROCONTROLLER is undefined , WINDOWS is selected !!!  ") 
 endif()
 

@@ -32,8 +32,7 @@ cmake_minimum_required(VERSION 3.28.0)
 # ##################################################################################################################################################################
 # ##################################################################################################################################################################
 ##### toolchain Selection
-if(${COMPILER_TYPE} STREQUAL "WINDOWS")
-elseif(${COMPILER_TYPE} STREQUAL "GENERIC")
+if(${COMPILER_TYPE} STREQUAL "GCC-MINGW")
 elseif(${COMPILER_TYPE} STREQUAL "GCC-AVR")
 elseif(${COMPILER_TYPE} STREQUAL "GCC-ARM")
 elseif(${COMPILER_TYPE} STREQUAL "GCC-RL78")
@@ -55,8 +54,8 @@ if(${ARCHITECTURE} STREQUAL "WINDOWS")
     set(CMAKE_ASM_COMPILER              ${COMPILER_PATH}/bin/gcc.exe)
 
     set(CMAKE_RANLIB                    ${COMPILER_PATH}/bin/ranlib)
-    set(CMAKE_OBJCOPY                   ${COMPILER_PATH}/bin/dlltool.exe)
-    set(CMAKE_OBJDUMP                   ${COMPILER_PATH}/bin/objcopy.exe)
+    set(CMAKE_OBJCOPY                   ${COMPILER_PATH}/bin/objcopy.exe)
+    set(CMAKE_OBJDUMP                   ${COMPILER_PATH}/bin/objdump.exe)
     set(CMAKE_SIZE                      ${COMPILER_PATH}/bin/size)
     set(CMAKE_LINKER                    ${COMPILER_PATH}/bin/ld.exe)
 
@@ -204,7 +203,7 @@ endif()
 ################################### Compiler flags  ########################################
 
 ##### Flags set
-if(${COMPILER_TYPE} STREQUAL "WINDOWS")
+if(${COMPILER_TYPE} STREQUAL "GCC-MINGW")
     set(PROJECT_DEFAULT_C_FLAGS  -g -Wall -Wextra -shared )
     set(PROJECT_DEFAULT_CXX_FLAGS -g -Wall -Wextra -shared )
     set(PROJECT_DEFAULT_ASM_FLAGS -S -g -Wall -Wextra)
