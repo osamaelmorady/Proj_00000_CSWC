@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "D:/Git_Projects/project_0001_0000_CSWC/01-Tools",
+    "cmake.sourceDirectory": "${workspaceFolder}/03-Tools",
     "files.associations": {
         "array": "cpp",
         "atomic": "cpp",
