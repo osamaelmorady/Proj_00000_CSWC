@@ -31,10 +31,10 @@ cmake_minimum_required(VERSION 3.28.0)
 ############################ Directories Preparation ########################
 ### Set Directories
 set(PROJECT_FOLDER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/..)
-set(PROJECT_TOOLS_FOLDER_DIR ${PROJECT_FOLDER_DIR}/01-Tools)
-set(PROJECT_SOURCE_FOLDER_DIR ${PROJECT_FOLDER_DIR}/02-Source)
-set(PROJECT_LINKER_FOLDER_DIR ${PROJECT_FOLDER_DIR}/02-Source/01-Dep)
-set(PROJECT_TEST_FOLDER_DIR ${PROJECT_FOLDER_DIR}/03-Tests)
+set(PROJECT_TOOLS_FOLDER_DIR ${PROJECT_FOLDER_DIR}/03-Tools)
+set(PROJECT_SOURCE_FOLDER_DIR ${PROJECT_FOLDER_DIR}/04-Source)
+set(PROJECT_LINKER_FOLDER_DIR ${PROJECT_FOLDER_DIR}/04-Source/01-Make)
+set(PROJECT_TEST_FOLDER_DIR ${PROJECT_FOLDER_DIR}/05-Tests)
 set(PROJECT_EXECUTABLES_FOLDER_DIR ${PROJECT_FOLDER_DIR}/09-Build)
 
 
@@ -58,6 +58,7 @@ set(PROJECT_ALL_SOURCE_FILES    "")
 set(PROJECT_ALL_HEADER_FILES    "")
 set(PROJECT_COMPILER_INCLUDES "")
 set(PROJECT_ALL_INCLUDE_DIRS    "")
+set(PROJECT_STATIC_LIB_INTERFACE    "")
 
 
 set(PROJECT_DEFAULT_C_FLAGS   "")
@@ -79,7 +80,7 @@ include(${PROJECT_TOOLS_FOLDER_DIR}/BuildFolder.cmake)
 ############################ Include Configurations ########################
 ### Include the config file
 if(EXISTS ${PROJECT_SOURCE_FOLDER_DIR})
-    include(${PROJECT_SOURCE_FOLDER_DIR}/01-Dep/Config.cmake)       
+    include(${PROJECT_SOURCE_FOLDER_DIR}/01-Make/Config.cmake)       
 else()
     message(FATAL_ERROR "Invalid 'Config.cmake' directory")      
 endif()

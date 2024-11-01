@@ -1,9 +1,9 @@
 #[[#########################################################################
    ####################### FILE DEFINITION SECTION ######################### 
    #########################################################################
-   #######       File   :    BuildFolder.cmake                       #######
+   #######       File   :    StatusGenerator.cmake                   #######
    #######       Target :    WINDOWS                                 #######
-   #######       Brief  :    generate default build directories      #######
+   #######       Brief  :    generate build status files             #######
    #######       Scope  :    Public                                  #######
    #######       Coding language : CMake                             #######
    #######       Designed by     : Osama ElMorady                    #######
@@ -27,35 +27,42 @@ cmake_minimum_required(VERSION 3.28.0)
 
 
 
+
 ##################################################################################################################################################################
 ##################################################################################################################################################################
 ##################################################################################################################################################################
 
-set(CMAKE_CURRENT_BINARY_DIR ${PROJECT_FOLDER_DIR}/CMake)
-file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
-set_source_files_properties(SOURCE CMakeLists.txt DIR1 ${PROJECT_FOLDER_DIR})
 
 
+### Generate directories
+if(${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
+	SET(COMPILED_SOURCES ${PROJECT_ALL_SOURCE_FILES})
+    SET(COMPILED_HEADERS ${PROJECT_ALL_HEADER_FILES})
 
+	list(FILTER COMPILED_SOURCES EXCLUDE REGEX "\\.asm$")
+    list(FILTER COMPILED_SOURCES EXCLUDE REGEX "\\.S$")
 
-set(CMAKE_VS_SDK_SOURCE_DIRECTORIES ${PROJECT_FOLDER_DIR})
-set(CMAKE_DEP_OUTPUT_DIRECTORY ${PROJECT_EXECUTABLES_FOLDER_DIR}/01-dep)
-set(CMAKE_LST_OUTPUT_DIRECTORY ${PROJECT_EXECUTABLES_FOLDER_DIR}/02-Lst)
-set(CMAKE_OBJECTS_OUTPUT_DIRECTORY ${PROJECT_EXECUTABLES_FOLDER_DIR}/03-Obj)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_EXECUTABLES_FOLDER_DIR}/04-Exe)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_EXECUTABLES_FOLDER_DIR}/04-Exe)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_EXECUTABLES_FOLDER_DIR}/04-Exe)
-set(CMAKE_MAP_FILE_DIRECTORY ${PROJECT_EXECUTABLES_FOLDER_DIR})
+    ### Generate Headers.txt
+    SET(CONTENTS "")
+    FOREACH(line ${COMPILED_HEADERS})
+        SET(CONTENTS "${CONTENTS}${line}\n")
+    ENDFOREACH(line)    
+    file(WRITE ${PROJECT_EXECUTABLES_FOLDER_DIR}/Headers.txt ${CONTENTS})
+    message(" -->> Generate Headers.txt ...... ")
 
-
-
-### create lst, dep, obj, exe directories
-file(MAKE_DIRECTORY ${CMAKE_DEP_OUTPUT_DIRECTORY})
-file(MAKE_DIRECTORY ${CMAKE_OBJECTS_OUTPUT_DIRECTORY})
-file(MAKE_DIRECTORY ${CMAKE_LST_OUTPUT_DIRECTORY})
-file(MAKE_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-
-
-
-############################ Message Directory ########################
-message(" -->>  Create Build Directory")    
+    ### Generate SourceFiles.txt
+    SET(CONTENTS "")
+    FOREACH(line ${COMPILED_SOURCES})
+        SET(CONTENTS "${CONTENTS}${line}\n")
+    ENDFOREACH(line)    
+    file(WRITE ${PROJECT_EXECUTABLES_FOLDER_DIR}/SourceFiles.txt ${CONTENTS})
+    message(" -->> Generate SourceFiles.txt ...... ")
+    
+    ### Generate Directories.txt
+    SET(CONTENTS "")
+    FOREACH(line ${PROJECT_ALL_INCLUDE_DIRS})
+        SET(CONTENTS "${CONTENTS}${line}\n")
+    ENDFOREACH(line)    
+    file(WRITE ${PROJECT_EXECUTABLES_FOLDER_DIR}/Directories.txt ${CONTENTS})
+    message(" -->> Generate Directories.txt ...... ")
+endif()
