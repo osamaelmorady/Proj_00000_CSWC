@@ -11,19 +11,19 @@ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libker
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libkernel32.a(libkernel32t.o)
                               C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libkernel32.a(libkernel32h.o) (__lib64_libkernel32_a_iname)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d005701.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*))
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*))
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d005582.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&))
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&))
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d005581.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (std::cout)
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (std::cout)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d005578.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (std::cin)
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (std::cin)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d001921.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (std::ostream::operator<<(int))
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (std::ostream::operator<<(int))
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d001912.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (std::ostream::operator<<(std::ostream& (*)(std::ostream&)))
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (std::ostream::operator<<(std::ostream& (*)(std::ostream&)))
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d001871.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (std::istream::operator>>(int&))
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (std::istream::operator>>(int&))
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d000000.o)
                               C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d005701.o) (_head_libstdc___6_dll)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libstdc++.dll.a(libstdc___6_dll_d006854.o)
@@ -75,9 +75,9 @@ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmin
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrt_vfprintf.o)
                               C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-pseudo-reloc.o) (vfprintf)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrt_scanf.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (scanf)
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (scanf)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrt_printf.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (printf)
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (printf)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrt_fprintf.o)
                               C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-merr.o) (fprintf)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(lib64_libucrt_extra_a-__initenv.o)
@@ -157,7 +157,7 @@ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsv
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(libapi-ms-win-crt-runtime-l1-1-0s00102.o)
                               C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-crt_handler.o) (signal)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(libapi-ms-win-crt-runtime-l1-1-0s00105.o)
-                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj (system)
+                              CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj (system)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(libapi-ms-win-crt-runtime-l1-1-0h.o)
                               C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(libapi-ms-win-crt-runtime-l1-1-0s00004.o) (_head_lib64_libapi_ms_win_crt_runtime_l1_1_0_a)
 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmsvcrt.a(libapi-ms-win-crt-runtime-l1-1-0t.o)
@@ -218,15 +218,15 @@ Discarded input sections
  .data          0x0000000000000000        0x0 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
  .bss           0x0000000000000000        0x0 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
  .rdata$zzz     0x0000000000000000       0x30 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
- .data          0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .rdata         0x0000000000000000       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .rdata$zzz     0x0000000000000000       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .data          0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .rdata$zzz     0x0000000000000000       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .data          0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
- .rdata$zzz     0x0000000000000000       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .rdata         0x0000000000000000       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .rdata$zzz     0x0000000000000000       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .rdata$zzz     0x0000000000000000       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
+ .rdata$zzz     0x0000000000000000       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .data          0x0000000000000000        0x0 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libkernel32.a(libkernel32s01618.o)
  .bss           0x0000000000000000        0x0 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libkernel32.a(libkernel32s01618.o)
  .text          0x0000000000000000        0x8 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libkernel32.a(libkernel32s01443.o)
@@ -484,6 +484,8 @@ Discarded input sections
 Memory Configuration
 
 Name             Origin             Length             Attributes
+FLASH            0x0000000140000000 0x0000000000080000 xr
+RAM              0x0000002000000000 0x0000000000020000 rw
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -508,11 +510,9 @@ Linker script and memory map
                 0x0000000000000160                __dll_characteristics__ = 0x160
 LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
 LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
-LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libole32.a
-LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libadvapi32.a
-LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
-LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
-LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
 LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libkernel32.a
 LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libuser32.a
 LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libgdi32.a
@@ -556,12 +556,12 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
  .text          0x0000000140001430       0x20 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
                 0x0000000140001430                __gcc_register_frame
                 0x0000000140001440                __gcc_deregister_frame
- .text          0x0000000140001450       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .text          0x0000000140001450       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
                 0x0000000140001450                CSWC_vInitCallBack()
- .text          0x0000000140001460       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
+ .text          0x0000000140001460       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
                 0x0000000140001460                CSWC_vInit()
                 0x000000014000147c                CSWC_vTaskMgmt()
- .text          0x0000000140001490       0xf0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .text          0x0000000140001490       0xf0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
                 0x0000000140001490                main
  .text          0x0000000140001580        0x8 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libkernel32.a(libkernel32s01618.o)
                 0x0000000140001580                __C_specific_handler
@@ -770,7 +770,7 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
 
 .rdata          0x0000000140004000      0x600
  *(.rdata)
- .rdata         0x0000000140004000       0x50 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .rdata         0x0000000140004000       0x50 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  *fill*         0x0000000140004050       0x10 
  .rdata         0x0000000140004060       0x60 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
                 0x0000000140004060                __dyn_tls_init_callback
@@ -787,15 +787,15 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
                 0x00000001400043c0       0x10 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
                 0x00000001400043c0                .refptr._MINGW_INSTALL_DEBUG_MATHERR
  .rdata$.refptr._ZSt3cin
-                0x00000001400043d0       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+                0x00000001400043d0       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
                 0x00000001400043d0                __fu1__ZSt3cin
                 0x00000001400043d0                .refptr._ZSt3cin
  .rdata$.refptr._ZSt4cout
-                0x00000001400043e0       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+                0x00000001400043e0       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
                 0x00000001400043e0                __fu0__ZSt4cout
                 0x00000001400043e0                .refptr._ZSt4cout
  .rdata$.refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
-                0x00000001400043f0       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+                0x00000001400043f0       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
                 0x00000001400043f0                .refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
  .rdata$.refptr.__CTOR_LIST__
                 0x0000000140004400       0x10 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
@@ -893,9 +893,9 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
  *(.pdata*)
  .pdata         0x0000000140005000       0x54 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
  .pdata         0x0000000140005054       0x18 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
- .pdata         0x000000014000506c        0xc CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .pdata         0x0000000140005078       0x18 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .pdata         0x0000000140005090        0xc CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .pdata         0x000000014000506c        0xc CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .pdata         0x0000000140005078       0x18 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .pdata         0x0000000140005090        0xc CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .pdata         0x000000014000509c       0x24 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .pdata         0x00000001400050c0        0xc C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-dllargv.o)
  .pdata         0x00000001400050cc       0x24 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
@@ -918,9 +918,9 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
  *(.xdata*)
  .xdata         0x0000000140006000       0x6c C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
  .xdata         0x000000014000606c        0x8 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
- .xdata         0x0000000140006074        0x8 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .xdata         0x000000014000607c       0x14 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .xdata         0x0000000140006090        0xc CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .xdata         0x0000000140006074        0x8 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .xdata         0x000000014000607c       0x14 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .xdata         0x0000000140006090        0xc CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .xdata         0x000000014000609c       0x18 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .xdata         0x00000001400060b4        0x4 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-dllargv.o)
  .xdata         0x00000001400060b8       0x18 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
@@ -944,7 +944,7 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
  *(.bss)
  .bss           0x0000000140007000       0x30 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
                 0x0000000140007000                __mingw_module_is_dll
- .bss           0x0000000140007030       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .bss           0x0000000140007030       0x10 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
                 0x0000000140007030                C_Var
                 0x0000000140007034                CPP_Var
  .bss           0x0000000140007040       0x10 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
@@ -1447,11 +1447,11 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
  .debug_aranges
                 0x000000014000d000       0x30 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
  .debug_aranges
-                0x000000014000d030       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
+                0x000000014000d030       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
  .debug_aranges
-                0x000000014000d060       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
+                0x000000014000d060       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
  .debug_aranges
-                0x000000014000d090       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+                0x000000014000d090       0x30 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .debug_aranges
                 0x000000014000d0c0       0x30 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .debug_aranges
@@ -1517,9 +1517,9 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
 .debug_info     0x000000014000e000    0x16200
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x000000014000e000     0x269c C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
- .debug_info    0x000000014001069c      0x1f5 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .debug_info    0x0000000140010891      0x155 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .debug_info    0x00000001400109e6     0xa8d9 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .debug_info    0x000000014001069c      0x1f5 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .debug_info    0x0000000140010891      0x155 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .debug_info    0x00000001400109e6     0xa8d9 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .debug_info    0x000000014001b2bf      0x661 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .debug_info    0x000000014001b920      0x602 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-natstart.o)
  .debug_info    0x000000014001bf22       0x8d C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-wildcard.o)
@@ -1553,9 +1553,9 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
 .debug_abbrev   0x0000000140025000     0x2c00
  *(.debug_abbrev)
  .debug_abbrev  0x0000000140025000      0x59d C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
- .debug_abbrev  0x000000014002559d       0xb2 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .debug_abbrev  0x000000014002564f       0x85 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .debug_abbrev  0x00000001400256d4      0x7e1 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .debug_abbrev  0x000000014002559d       0xb2 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .debug_abbrev  0x000000014002564f       0x85 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .debug_abbrev  0x00000001400256d4      0x7e1 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .debug_abbrev  0x0000000140025eb5      0x13f C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .debug_abbrev  0x0000000140025ff4       0xb6 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-natstart.o)
  .debug_abbrev  0x00000001400260aa       0x2e C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-wildcard.o)
@@ -1589,9 +1589,9 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
 .debug_line     0x0000000140028000     0x2200
  *(.debug_line)
  .debug_line    0x0000000140028000      0x430 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
- .debug_line    0x0000000140028430       0x5a CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .debug_line    0x000000014002848a       0x70 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .debug_line    0x00000001400284fa      0x187 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .debug_line    0x0000000140028430       0x5a CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .debug_line    0x000000014002848a       0x70 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .debug_line    0x00000001400284fa      0x187 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .debug_line    0x0000000140028681      0x127 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .debug_line    0x00000001400287a8       0x56 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-natstart.o)
  .debug_line    0x00000001400287fe       0x3a C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-wildcard.o)
@@ -1625,9 +1625,9 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
 .debug_frame    0x000000014002b000      0xc00
  *(.debug_frame*)
  .debug_frame   0x000000014002b000      0x150 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
- .debug_frame   0x000000014002b150       0x40 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .debug_frame   0x000000014002b190       0x68 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .debug_frame   0x000000014002b1f8       0x40 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .debug_frame   0x000000014002b150       0x40 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .debug_frame   0x000000014002b190       0x68 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .debug_frame   0x000000014002b1f8       0x40 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .debug_frame   0x000000014002b238       0x88 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .debug_frame   0x000000014002b2c0       0x30 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-dllargv.o)
  .debug_frame   0x000000014002b2f0       0xa8 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
@@ -1650,9 +1650,9 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
 .debug_str      0x000000014002c000      0x600
  *(.debug_str)
  .debug_str     0x000000014002c000      0x21f C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
- .debug_str     0x000000014002c21f        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
- .debug_str     0x000000014002c21f        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
- .debug_str     0x000000014002c21f      0x2ce CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+ .debug_str     0x000000014002c21f        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
+ .debug_str     0x000000014002c21f        0x0 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
+ .debug_str     0x000000014002c21f      0x2ce CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .debug_str     0x000000014002c4ed        0x0 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .debug_str     0x000000014002c4ed       0x18 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-natstart.o)
  .debug_str     0x000000014002c505        0x0 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-wildcard.o)
@@ -1749,11 +1749,11 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
  .debug_line_str
                 0x000000014002d000      0x1c6 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
  .debug_line_str
-                0x000000014002d1c6      0x136 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/03-Cfg/CSWC_cfg.cpp.obj
+                0x000000014002d1c6      0x136 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
  .debug_line_str
-                0x000000014002d2fc      0x143 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/04-Src/CSWC_prg.cpp.obj
+                0x000000014002d2fc      0x143 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
  .debug_line_str
-                0x000000014002d43f      0x3a4 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/04-Source/02-Stub/main.cpp.obj
+                0x000000014002d43f      0x3a4 CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj
  .debug_line_str
                 0x000000014002d7e3       0xe8 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
  .debug_line_str

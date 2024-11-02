@@ -116,7 +116,7 @@ message(" -->> Add Compiler std libraries and includes ....")
 message(" -->> Remove excluded files and directories ....")
 
 #### Exclude Directories
-foreach(EXCLUDE_DIR ${EXCLUDE_DIRS})
+foreach(EXCLUDE_DIR ${PROJECT_EXCLUDE_DIRS})
     list(FILTER PROJECT_ALL_SOURCE_FILES EXCLUDE REGEX "${EXCLUDE_DIR}/.*")
     list(FILTER PROJECT_ALL_HEADER_FILES EXCLUDE REGEX "${EXCLUDE_DIR}/.*")
     list(FILTER PROJECT_ALL_INCLUDE_DIRS EXCLUDE REGEX "${EXCLUDE_DIR}")
@@ -124,7 +124,7 @@ endforeach()
 
 
 #### Exclude Files
-foreach(EXCLUDE_FILE ${EXCLUDE_FILES})
+foreach(EXCLUDE_FILE ${PROJECT_EXCLUDE_FILES})
     list(FILTER PROJECT_ALL_SOURCE_FILES EXCLUDE REGEX "/${EXCLUDE_FILE}$")
 endforeach()
 

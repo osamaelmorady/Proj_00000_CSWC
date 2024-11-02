@@ -1,7 +1,8 @@
-D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../04-Source/03-Cfg/CSWC_cfg.hpp
-D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../04-Source/04-Src/CSWC_int.hpp
-D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../04-Source/04-Src/CSWC_priv.hpp
-D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../04-Source/03-Cfg/HFIC_CSWC_cfg.hpp
-D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../04-Source/03-Cfg/LFIC_CSWC_cfg.hpp
-D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../04-Source/03-Cfg/MFIC_CSWC_cfg.hpp
-D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../04-Source/03-Cfg/SFIC_CSWC_cfg.hpp
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/02-Stub/BSW_cfg.h
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/03-Cfg/CSWC_cfg.hpp
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/04-Src/CSWC_int.hpp
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/04-Src/CSWC_priv.hpp
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/03-Cfg/HFIC_CSWC_cfg.hpp
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/03-Cfg/LFIC_CSWC_cfg.hpp
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/03-Cfg/MFIC_CSWC_cfg.hpp
+D:/Git_Projects/project_0001_0000_CSWC/03-Tools/../05-Source/03-Cfg/SFIC_CSWC_cfg.hpp

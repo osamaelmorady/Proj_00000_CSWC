@@ -31,6 +31,8 @@ cmake_minimum_required(VERSION 3.28.0)
 # ##################################################################################################################################################################
 # ##################################################################################################################################################################
 # ##################################################################################################################################################################
+set(PROJECT_TARGET ${PROJECT_NAME})
+
 
 
 ##### Output set
@@ -38,17 +40,21 @@ set(DEFAULT_EXECUTABLE_SUFFIX        "exe")
 set(DEFAULT_OUT_SUFFIX        "out")
 set(DEFAULT_HEX_SUFFUX        "hex")
 set(DEFAULT_ELF_SUFFUX        "elf")
+set(DEFAULT_LIB_SUFFUX        "a")
+set(DEFAULT_OBJECT_SUFFUX        "o")
 
 
 
 
 
-set(PROJECT_TARGET ${PROJECT_NAME})
+
 
 ############################ Generate Hex Files ########################
 ### Add Executable
 message(" -->> Cofigure the executable files ....")
 message(" ")
+
+
 
 if (PROJECT_ALL_SOURCE_FILES)
     add_executable(${PROJECT_TARGET} ${PROJECT_ALL_SOURCE_FILES})
@@ -58,103 +64,137 @@ else()
 endif()
 
 
-
-
-
-### include directories
-target_include_directories(${PROJECT_TARGET} PUBLIC ${PROJECT_ALL_INCLUDE_DIRS} PRIVATE ${PROJECT_COMPILER_INCLUDES})
-
-### compile
-target_compile_options(${PROJECT_TARGET} PRIVATE 
-         $<$<COMPILE_LANGUAGE:${PROJECT_LANGUAGE}>:${CUSTOM_${PROJECT_LANGUAGE}_FLAGS}
-         ${PROJECT_DEFAULT_${PROJECT_LANGUAGE}_FLAGS}>
-         $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}> 
-         )
-
-
-
-target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${PROJECT_CUSTOM_LINKER_FLAGS} ${PROJECT_DEFAULT_LINK_FLAGS} -T ${PROJECT_LINKER_FOLDER_DIR}/${PROJECT_LINKER_FILE})
-	
-
-
-
-
-
-
-
 # ##################################################################################################################################################################
 # ##################################################################################################################################################################
 # ##################################################################################################################################################################
 
 
 # ############################# Set Architecture ########################
-# if(${ARCHITECTURE} STREQUAL "WINDOWS" AND PROJECT_ALL_SOURCE_FILES)
+if(${ARCHITECTURE} STREQUAL "WINDOWS" AND PROJECT_ALL_SOURCE_FILES)
 
-#         ### include directories
-#         target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_ALL_INCLUDE_DIRS} PRIVATE ${PROJECT_COMPILER_INCLUDES})
+    ### include directories
+    target_include_directories(${PROJECT_TARGET} PUBLIC ${PROJECT_ALL_INCLUDE_DIRS} PRIVATE ${PROJECT_COMPILER_INCLUDES})
 
-#         ### compile
-#         if (PROJECT_LANGUAGE STREQUAL "C")
-#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#             $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
-#         elseif (PROJECT_LANGUAGE STREQUAL "CXX")
-#             target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_CXX_FLAGS} ${PROJECT_DEFAULT_CXX_FLAGS}>
-#             $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>  )
-#         else()
-#             message(FATAL_ERROR " xxx  ${PROJECT_LANGUAGE} is not supported  xxx  ")
-#         endif()
 
-#         ### link
-#         if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
-#             set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
-#         elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-#             set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
-#         endif()
-#         target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${PROJECT_CUSTOM_LINKER_FLAGS} ${LINKER_FILE_CFG_PAR} -T ${PROJECT_LINKER_FOLDER_DIR}/${PROJECT_LINKER_FILE})
+    ### compile
+    target_compile_options(${PROJECT_TARGET} PRIVATE 
+         $<$<COMPILE_LANGUAGE:${PROJECT_LANGUAGE}>:${CUSTOM_${PROJECT_LANGUAGE}_FLAGS}
+         ${PROJECT_DEFAULT_${PROJECT_LANGUAGE}_FLAGS}>
+         $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}> 
+         )
 
-# elseif(${ARCHITECTURE} STREQUAL "GENERIC")
+    ### link
+    if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
+        set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
+    elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+        set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
+    endif()
+    target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${PROJECT_CUSTOM_LINKER_FLAGS} ${PROJECT_DEFAULT_LINK_FLAGS} -T ${PROJECT_LINKER_FOLDER_DIR}/${PROJECT_LINKER_FILE})
 
-#     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".${DEFAULT_HEX_SUFFUX}")
     
-#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#     # $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
-#     # )
-    
-#     set (OBJCPY ${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX})
-#     set(POST_BUILD_COMMAND ${OBJCPY} -O ihex  ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX} -O binary  ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.bin)
+    # set(GENERATE_OBJECTS_COMMAND ${CMAKE_OBJCOPY} -I ${PROJECT_ALL_SOURCE_FILES} -O  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_OBJECT_SUFFIX})
+    set(GENERATE_ARCHIVE_COMMAND ${CMAKE_AR} rcs ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_LIB_SUFFUX}  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX})
+    # set(GENERATE_HEX_COMMAND ${CMAKE_OBJCOPY} -O ihex   ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX})
+    # set(GENERATE_OUT_COMMAND ${CMAKE_OBJCOPY} -O ihex  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_OUT_SUFFUX})
+    set(PRINT_SIZE_COMMAND ${CMAKE_SIZE} --format=berkeley  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX})
 
 
-#     # set(CMAKE_C_RESPONSE_FILE_LINK_FLAG "-f ")
-#     set(CMAKE_C_COMPILE_OBJECT "<CMAKE_C_COMPILER> <DEFINES> <INCLUDES> <FLAGS>  -o <OBJECT> -c <SOURCE>")
-#     set(OBJECTS ${OBJECTS})
-#     if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
-#     elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
-#     endif()
-#     target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${CUSTOM_LINK_FLAGS} ${LINKER_FILE_CFG_PAR} ${PROJECT_LINKER_FOLDER_DIR}/${LNKFILENAME}) 
-# elseif(${ARCHITECTURE} STREQUAL "ARM")
+elseif(${ARCHITECTURE} STREQUAL "AVR")
 
-#     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".${DEFAULT_HEX_SUFFUX}" SUFFIX ".${DEFAULT_OUT_SUFFIX}")
+    ### include directories
+    target_include_directories(${PROJECT_TARGET} PUBLIC ${PROJECT_ALL_INCLUDE_DIRS} PRIVATE ${PROJECT_COMPILER_INCLUDES})
 
-#     # target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_CUSTOM_C_FLAGS} ${PROJECT_DEFAULT_C_FLAGS}>
-#     # $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}>
-#     # )
+    ### compile
+    target_compile_options(${PROJECT_TARGET} PRIVATE 
+         $<$<COMPILE_LANGUAGE:${PROJECT_LANGUAGE}>:${CUSTOM_${PROJECT_LANGUAGE}_FLAGS}
+         ${PROJECT_DEFAULT_${PROJECT_LANGUAGE}_FLAGS}>
+         $<$<COMPILE_LANGUAGE:ASM>:${PROJECT_CUSTOM_ASM_FLAGS} ${PROJECT_DEFAULT_ASM_FLAGS}> 
+         )
 
-#     set (OBJCPY ${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX} ${PROJECT_NAME}.${DEFAULT_OUT_SUFFIX})
-#     set(POST_BUILD_COMMAND ${${ELF_TOOL}} -O --verbose ihex  ${PROJECT_EXECUTABLES_FOLDER_DIR}/${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX})
+    ### link
+    if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
+        set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
+    elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+        set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
+    endif()
+    target_link_options(${PROJECT_TARGET} BEFORE PUBLIC  ${PROJECT_CUSTOM_LINKER_FLAGS} ${PROJECT_DEFAULT_LINK_FLAGS} -T ${PROJECT_LINKER_FOLDER_DIR}/${PROJECT_LINKER_FILE})
 
-#     # set(CMAKE_C_RESPONSE_FILE_LINK_FLAG "-f ")
-#     set(CMAKE_C_COMPILE_OBJECT "<CMAKE_C_COMPILER> <DEFINES> <INCLUDES> <FLAGS>  -o <OBJECT> -c <SOURCE>")
-#     set(OBJECTS ${OBJECTS})
-#     if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_RELEASE})
-#     elseif(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-#         set(PROJECT_DEFAULT_LINK_FLAGS ${DEFAULT_LINK_FLAGS_DEBUG})
-#     endif()
-#     target_link_options(${PROJECT_NAME} BEFORE PUBLIC ${PROJECT_DEFAULT_LINK_FLAGS} ${CUSTOM_LINK_FLAGS} ${LINKER_FILE_CFG_PAR} ${PROJECT_LINKER_FOLDER_DIR}/${LNKFILENAME}) 
-# else()
-#     message(FATAL_ERROR "")    
-# endif()
+    ### Additionanl post build commands
+    # set(PRINT_SIZE_COMMAND ${CMAKE_SIZE} --format=avr --mcu=${MICROCONTROLLER}  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX})
+    # set(GENERATE_OBJECTS_COMMAND ${CMAKE_OBJCOPY} -O  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX})
+    # set(GENERATE_ARCHIVE_COMMAND ${CMAKE_AR} --format=avr --mcu=${MICROCONTROLLER}  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX})
+    # set(GENERATE_HEX_COMMAND ${CMAKE_OBJCOPY} -O ihex   ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX})
+    # set(GENERATE_OUT_COMMAND ${CMAKE_OBJCOPY} -O ihex  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_EXECUTABLE_SUFFIX} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_OUT_SUFFUX})
+
+else()
+    message(FATAL_ERROR "")    
+endif()
+
+
+
+
+
+
+
+############################ Generate object files ########################
+########### Invoke : Generate object files command
+# add_custom_command(
+#     TARGET ${PROJECT_TARGET}
+#     POST_BUILD
+#     COMMAND echo  --  Generate object ${CMAKE_OBJECTS_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_OBJECT_SUFFUX}
+#     COMMAND ${GENERATE_OBJECTS_COMMAND}
+#     DEPENDS $<TARGET_FILE:${PROJECT_TARGET}>
+#     COMMENT "Creating object files"
+# )
+
+
+
+
+############################ Generate static libraries ########################
+########### Invoke : Generate static libraries command
+add_custom_command(
+    TARGET ${PROJECT_TARGET}
+    POST_BUILD
+    COMMAND echo  --  Generate Static Library ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_LIB_SUFFUX}
+    COMMAND ${GENERATE_ARCHIVE_COMMAND}
+    DEPENDS $<TARGET_FILE:${PROJECT_TARGET}>
+    COMMENT "Creating static library"
+)
+
+
+
+
+# ############################ Generate Executables outputs ########################
+# ########### Invoke : Generate executables command
+# add_custom_command(
+#     TARGET ${PROJECT_TARGET}
+#     POST_BUILD
+#     COMMAND echo  --  Generate Intel Hex file ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/${PROJECT_NAME}.${DEFAULT_HEX_SUFFUX}
+#     COMMAND ${GENERATE_HEX_COMMAND}
+#     DEPENDS $<TARGET_FILE:${PROJECT_TARGET}>
+#     COMMENT "Creating Hex File"
+# )
+
+
+
+
+
+
+############################ Generate Hex Files ########################
+########### Invoke : Print Memory Usage
+add_custom_command(
+    TARGET ${PROJECT_TARGET}
+    POST_BUILD
+    COMMAND echo ----- ---- ----  ---- ---- ---- ---- ---- ------
+    COMMAND echo ----- ---- ----   Memory Usage  ----  ---- -----
+    COMMAND echo ----- ---- ----  ---- ---- ---- ---- ---- ------
+    COMMAND ${PRINT_SIZE_COMMAND}
+    COMMAND echo ----- ---- ---- ---- ---- ---- ---- ---- ------
+    DEPENDS $<TARGET_FILE:${PROJECT_TARGET}>
+    COMMENT "Command to print the memory usage"
+)
+
+
+
 
 
