@@ -184,13 +184,13 @@ endif()
 
 ######################################## $EXCLUDE_DIR check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED EXCLUDE_DIRS)
-    set(EXCLUDE_DIRS )            
+if (NOT DEFINED PROJECT_EXCLUDE_DIRS)
+    set(PROJECT_EXCLUDE_DIRS )            
 endif()
-######################################## $EXCLUDE_FILES check   #######################################
+######################################## $PROJECT_EXCLUDE_FILES check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED EXCLUDE_FILES)
-    set(EXCLUDE_FILES )            
+if (NOT DEFINED PROJECT_EXCLUDE_FILES)
+    set(PROJECT_EXCLUDE_FILES )            
 endif()
 
 

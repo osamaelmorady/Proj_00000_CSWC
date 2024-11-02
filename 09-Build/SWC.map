@@ -484,6 +484,8 @@ Discarded input sections
 Memory Configuration
 
 Name             Origin             Length             Attributes
+FLASH            0x0000000140000000 0x0000000000080000 xr
+RAM              0x0000002000000000 0x0000000000020000 rw
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -508,8 +510,6 @@ Linker script and memory map
                 0x0000000000000160                __dll_characteristics__ = 0x160
 LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/crt2.o
 LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtbegin.o
-LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libole32.a
-LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../lib/libadvapi32.a
 LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/03-Cfg/CSWC_cfg.cpp.obj
 LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/04-Src/CSWC_prg.cpp.obj
 LOAD CMakeFiles/SWC.dir/D_/Git_Projects/project_0001_0000_CSWC/05-Source/02-Stub/main.cpp.obj

@@ -33,21 +33,14 @@ set(PROJECT_NAME "SWC")
 
 
 
-
-###############  Directory, Files Exclusion  ###############
-set(EXCLUDE_DIRS  )
-set(EXCLUDE_FILES  )
-
-
-
-
 #################  Set Microcontroller options ################# 
 #[[##    Range [ WINDOWS, AVR, ARM , RL78, R8C ]     #]]
 set(ARCHITECTURE "WINDOWS")
 
 
-#[[##    Range [ eg. atmega32, f5f11 , stm32 ]     #]]
-set(MICROCONTROLLER "atmega32")
+#[[##    Range [ eg. atmega328p, f5f11 , stm32 ]     #]]
+set(MICROCONTROLLER "atmega328p")
+set(MCU_CPU_CLOCK "8000000UL")
 set(ROM_SIZE 1MB)
 set(RAM_SIZE 65K)
 
@@ -62,6 +55,7 @@ set(COMPILER_VERSION "14.1.0")
 
 #[[##    Range [ Your compiler path ]     #]]
 set(COMPILER_PATH "C:/msys64/ucrt64")
+# set(COMPILER_PATH "C:/WinAVR")
 
 
 
@@ -89,11 +83,10 @@ set(CMAKE_FLASH_TOOL_PATH "C:/msys64/mingw64/bin")
 
 
 ###############  Set Compiler Flags ############### 
-set(PROJECT_CUSTOM_C_FLAGS  -mmcu=$(MCU) -fno-exception -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
-set(PROJECT_CUSTOM_CXX_FLAGS  -mmcu=$(MCU) -fno-exceptions -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
+set(PROJECT_CUSTOM_C_FLAGS   -fno-exception -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
+set(PROJECT_CUSTOM_CXX_FLAGS   -fno-exceptions -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
 set(PROJECT_CUSTOM_ASM_FLAGS )
-set(PROJECT_CUSTOM_LINKER_FLAGS -ffunction-sections  -fsigned-char -fdata-sections -flto -Wall -Xlinker --gc-sections -lole32 -ladvapi32)
-
+set(PROJECT_CUSTOM_LINKER_FLAGS -ffunction-sections -Wall -Xlinker --gc-sections --stats)
 
 
 ###############  Set Linker script file ############### 
@@ -102,6 +95,10 @@ set(PROJECT_LINKER_FILE i386pep.x)
 
 
 
+
+###############  Directory, Files Exclusion  ###############
+set(PROJECT_EXCLUDE_DIRS  )
+set(PROJECT_EXCLUDE_FILES  )
 
 
 
