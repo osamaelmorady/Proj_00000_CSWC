@@ -62,6 +62,8 @@ if(${ARCHITECTURE} STREQUAL "WINDOWS")
     set(CMAKE_READELF                   ${COMPILER_PATH}/bin/readelf.exe)
     set(CMAKE_GDB                      ${COMPILER_PATH}/bin/gdb.exe)
     set(CMAKE_INSTALL_PREFIX             ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+
+    set(PROJECT_DEFAULT_OUT_SUFFIX       "exe")
     
 elseif(${ARCHITECTURE} STREQUAL "AVR")
    # Set AVR toolchain variables
@@ -80,6 +82,8 @@ elseif(${ARCHITECTURE} STREQUAL "AVR")
    set(CMAKE_GDB                      ${COMPILER_PATH}/bin/avr-gdb)
    set(CMAKE_FLASH                    ${COMPILER_PATH}/bin/avrdude)
    set(CMAKE_INSTALL_PREFIX             ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+
+   set(PROJECT_DEFAULT_OUT_SUFFIX       "elf")
    
 elseif(${ARCHITECTURE} STREQUAL "RL78")
    set(CMAKE_AR                        ${COMPILER_PATH}/bin/rl78-elf-ar)
@@ -97,6 +101,8 @@ elseif(${ARCHITECTURE} STREQUAL "RL78")
    set(CMAKE_GDB                      ${COMPILER_PATH}/bin/rl78-elf-gdb)
    # set(CMAKE_FLASH                    ${COMPILER_PATH}/bin/avrdude)
    set(CMAKE_INSTALL_PREFIX             ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+
+   set(PROJECT_DEFAULT_OUT_SUFFIX       "elf")
 
 elseif(${ARCHITECTURE} STREQUAL "R8C")
    # Set R8C toolchain variables
@@ -116,6 +122,8 @@ elseif(${ARCHITECTURE} STREQUAL "R8C")
    # set(CMAKE_FLASH                    ${COMPILER_PATH}/bin/avrdude)
    set(CMAKE_INSTALL_PREFIX             ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
+   set(PROJECT_DEFAULT_OUT_SUFFIX       "elf")
+
 elseif(${ARCHITECTURE} STREQUAL "ARM")
     # Set ARM toolchain variables
    set(CMAKE_AR                        ${COMPILER_PATH}/bin/arm-none-eabi-ar)
@@ -133,6 +141,8 @@ elseif(${ARCHITECTURE} STREQUAL "ARM")
    set(CMAKE_GDB                      ${COMPILER_PATH}/bin/rarm-none-eabi-gdb)
    # set(CMAKE_FLASH                    ${COMPILER_PATH}/bin/avrdude)
    set(CMAKE_INSTALL_PREFIX             ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+
+   set(PROJECT_DEFAULT_OUT_SUFFIX       "hex")
 else()
     message(FATAL_ERROR "ARCHITECTURE : Not Supported")
 endif()
@@ -204,8 +214,8 @@ endif()
 
 ##### Flags set
 if(${COMPILER_TYPE} STREQUAL "GCC-MINGW")
-    set(PROJECT_DEFAULT_C_FLAGS  -g -Wall -Wextra -shared )
-    set(PROJECT_DEFAULT_CXX_FLAGS -g -Wall -Wextra -shared )
+    set(PROJECT_DEFAULT_C_FLAGS  -g -Wall -Wextra -shared)
+    set(PROJECT_DEFAULT_CXX_FLAGS -g -Wall -Wextra -shared)
     set(PROJECT_DEFAULT_ASM_FLAGS -S -g -Wall -Wextra)
     set(DEFAULT_LINK_FLAGS_DEBUG -g -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)
     set(DEFAULT_LINK_FLAGS_RELEASE -g -Wl,--no-as-needed -Wl,-Map=${CMAKE_MAP_FILE_DIRECTORY}/${PROJECT_NAME}.map)

@@ -484,8 +484,6 @@ Discarded input sections
 Memory Configuration
 
 Name             Origin             Length             Attributes
-FLASH            0x0000000140000000 0x0000000000080000 xr
-RAM              0x0000002000000000 0x0000000000020000 rw
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -1886,7 +1884,7 @@ LOAD C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/crtend.o
 
 .zdebug_gdb_scripts
  *(.zdebug_gdb_scripts)
-OUTPUT(D:\Git_Projects\project_0001_0000_CSWC\09-Build\04-Exe\SWC.exe pei-x86-64)
+OUTPUT(D:\Git_Projects\project_0001_0000_CSWC\09-Build\03-Exe\SWC.exe pei-x86-64)
 LOAD SWC_exe_rtr000000.o
 LOAD SWC_exe_ertr000001.o
 LOAD SWC_exe_rtr000002.o
