@@ -7,15 +7,7 @@ OUTPUT_FORMAT(pei-x86-64)
 SEARCH_DIR("=/ucrt64/x86_64-w64-mingw32/lib"); SEARCH_DIR("=/ucrt64/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
 
 
-/* Define memory regions */
-MEMORY
-{
-    FLASH (rx) : ORIGIN = 0x0140000000, LENGTH = 512K  /* Adjust size as necessary */
-    RAM (rw) : ORIGIN = 0x2000000000, LENGTH = 128K   /* Adjust size as necessary */
-}
 
-/* Define the entry point of the program */
-ENTRY(main)
 
 SECTIONS
 {
@@ -72,7 +64,7 @@ SECTIONS
      *(.gcc_exc)
     PROVIDE (etext = .);
      KEEP (*(.gcc_except_table))
-  }>FLASH
+  }
   /* The Cygwin32 library uses a section to avoid copying certain data
      on fork.  This used to be named ".data".  The linker used
      to include this between __data_start__ and __data_end__, but that
