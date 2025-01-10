@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-01-11T01:07:21.131147" rpa="false" schemaversion="5">
+<suite id="s1" name="SS" source="D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Tests\examples\SS.robot">
+<test id="s1-t1" name="Take Screen shot of your desktop" line="13">
+<kw name="Given StartRobot">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-11T01:07:21.449001" level="INFO">Start!</msg>
+<arg>Start!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-11T01:07:21.448880" elapsed="0.000182"/>
+</kw>
+<status status="PASS" start="2025-01-11T01:07:21.448531" elapsed="0.000618"/>
+</kw>
+<kw name="When Path is Set">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2025-01-11T01:07:21.449609" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>${SCREEN_SHOT_DIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2025-01-11T01:07:21.449642" elapsed="0.001055"/>
+</kw>
+<status status="PASS" start="2025-01-11T01:07:21.449433" elapsed="0.001334"/>
+</kw>
+<kw name="Then Take Screen Shot" owner="Screenshot">
+<msg time="2025-01-11T01:07:21.621216" level="INFO" html="true">&lt;a href="screenshot_2.jpg"&gt;&lt;img src="screenshot_2.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2025-01-11T01:07:21.450976" elapsed="0.170329"/>
+</kw>
+<doc>This test Takes screen shot of your desktop.
+Step 1:</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2025-01-11T01:07:21.444238" elapsed="0.177375"/>
+</test>
+<doc>... Include required Libraries ...</doc>
+<status status="PASS" start="2025-01-11T01:07:21.132313" elapsed="0.490446"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SS">SS</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-11T01:07:21.160500" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 2: Setting 'Name' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.160844" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 14: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.161748" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 15: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.164712" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 16: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.166169" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 17: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.166699" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 18: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.167093" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 19: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.167611" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 20: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.168131" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 21: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.168679" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 22: Setting 'Metadata' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.169201" level="ERROR">Error in file 'D:\Git_Projects\project_0001_0000_CSWC\06-Tests\02-Integration\Suites\Suite.robot' on line 25: Setting 'Test Timeout' is not allowed in resource file.</msg>
+<msg time="2025-01-11T01:07:21.449609" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+</errors>
+</robot>

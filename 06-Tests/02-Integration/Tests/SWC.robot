@@ -4,20 +4,21 @@ Documentation   ... Include required Libraries ...
                 ... Define Keywords ...      
 Library     OperatingSystem
 Library     Collections
+Library     Process
+Library    Screenshot
 
 
 
 *** Variables ***
-${BUILD_COMMAND}      gcc -o output.elf main.c
-${HEX_COMMAND}        objcopy -O ihex output.elf output.hex
-${EXPECTED_HEX}       path/to/expected_output.hex
-${GENERATED_HEX}      output.hex
+
+
 
 
 
 
 *** Test Cases ***
 Start a Chrome Page
+    [Tags]    Smoke
     [Documentation]    This test builds the C code and verifies the generated HEX file.
     ...    Step 1: Clean Previous Builds
     ...    Run Process         rm     -f    output.elf output.hex
@@ -36,10 +37,8 @@ Start a Chrome Page
     ...    Step 5: Compare HEX Files
     ...    Compare Files       ${GENERATED_HEX}    ${EXPECTED_HEX} 
     ...    
-    [Tags]    Smoke
 
     StartRobot
-
 
 
 *** Keywords ***
@@ -47,8 +46,4 @@ StartRobot
     Log    Hello World!
     log to console   Hello World!
 
-Compare Files
-    [Arguments]    ${file1}    ${file2}
-    ${content1}=    Get File   ${file1}
-    ${content2}=    Get File   ${file2}
-    Should Be Equal As Strings    ${content1}    ${content2}
+
