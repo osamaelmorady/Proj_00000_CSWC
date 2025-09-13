@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cmake",
+      "label": "CMake: My clean rebuild",
+      "command": "cleanRebuild",
+      "targets": ["all"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": [],
+      "detail": "CMake template clean rebuild task"
+    },
+    {
+      "label": "Run: SWC.exe",
+      "type": "process",
+      "command": "${workspaceFolder}\\09-Build\\03-Exe\\SWC.exe",
+      "options": { "cwd": "${workspaceFolder}\\09-Build\\03-Exe" },
+      "problemMatcher": []
+    },
+
+    // ← Add this
+    {
+      "label": "Build & Run (CMake + SWC)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "CMake: My clean rebuild",
+        "Run: SWC.exe"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

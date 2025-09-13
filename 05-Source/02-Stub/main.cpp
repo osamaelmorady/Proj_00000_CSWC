@@ -5,46 +5,30 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdbool.h>
 #include <iostream>
 #include <cstdlib>
 
 #include "CSWC_int.hpp"
 
-// using namespace std;
+
+#include <vector>
+#include <string>
+#include <stdbool.h>
+
+#include <ctype.h>
 
 
 
-int C_Var = 0 ;
-int CPP_Var = 0 ;
 
-int main(void)
+
+int main(int argc,int *argv[])
 {
 
-
-	scanf("%d", &C_Var) ;
-
-	for (int i=0;i<C_Var;i++)
-	{
-		printf ("hello C Programming! %d  \n",C_Var) ;
-	}
+    std::cout << "All is working fined" <<std::endl ;
 
 
-	std::cin >> CPP_Var ;
-
-	for (int i=0;i<CPP_Var;i++)
-	{
-		std::cout<<"hello C++ Programming! "<<CPP_Var<< "  "<<std::endl;
-	}
-
-
-
-	std::system("pause\n");  // Pause program to see the output (Windows)
-
-
-	// while(1) ;
-
-	return 0;
+	return false;
 }
 
 
@@ -62,7 +46,8 @@ int main(void)
 #ifdef AVR_TEST
 
 
-
+#define F_CPU 8000000UL
+#define __AVR_ATmega325P__ 
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -82,6 +67,41 @@ int main(void) {
         // Toggle the LED off
         PORTB &= ~(1 << LED_PIN); // Set PB0 low
         _delay_ms(500);           // Delay for 500 milliseconds
+    }
+
+    return 0; // This line will never be reached
+}
+
+
+
+#endif 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ifdef ARM_TEST
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+#define LED_PIN PB0  // Define the LED pin connected to PB0
+
+int main(void) {
+
+    // Main loop
+    while (1) {
+
     }
 
     return 0; // This line will never be reached
