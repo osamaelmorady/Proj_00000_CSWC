@@ -8,7 +8,7 @@
             "name": "SWC",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/09-Build/04-Exe/SWC.exe",
+            "program": "${workspaceFolder}/09-Build/03-Exe/SWC.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -28,6 +28,15 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "Debug Robot Test",
+            "type": "robotframework-lsp",
+            "request": "launch",
+            "target": "${workspaceFolder}\\06-Tests\\02-Integration\\Robot\\SWC.robot",
+            "args": ["--outputdir", "${workspaceFolder}\\06-Tests\\02-Integration\\Robot\\Results\\"],
+            "robot.interactiveConsole.arguments": ["--output", "${workspaceFolder}\\06-Tests\\02-Integration\\Results\\interactive_output.xml"],
+            "robot.runArguments": ["--outputdir", "${workspaceFolder}\\06-Tests\\02-Integration\\Results\\"],
         }
 
 

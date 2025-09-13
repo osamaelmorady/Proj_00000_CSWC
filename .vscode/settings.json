@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/03-Tools",
+    "robot.pythonpath": ["${workspaceFolder}\\06-Tests\\02-Integration\\venv\\Scripts\\python"],
     "files.associations": {
         "array": "cpp",
         "atomic": "cpp",
@@ -50,6 +50,21 @@
         "streambuf": "cpp",
         "text_encoding": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
-    }
+        "variant": "cpp",
+        "cstdarg": "cpp",
+        "cinttypes": "cpp",
+        "stack": "cpp",
+        "sstream": "cpp",
+        "cstring": "cpp"
+    },
+    "robot.interactiveConsole.arguments": 
+    [
+        "--output", "${workspaceFolder}\\06-Tests\\02-Integration\\Results\\interactive_output.xml",
+        "--outputdir", "${workspaceFolder}\\06-Tests\\02-Integration\\Results\\"
+    ],
+    "cmake.sourceDirectory": "${workspaceFolder}/03-Tools",
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
+
+    
 }

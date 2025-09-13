@@ -38,7 +38,7 @@ set(PROJECT_NAME "SWC")
 set(ARCHITECTURE "WINDOWS")
 
 
-#[[##    Range [ eg. atmega328p, f5f11 , stm32 ]     #]]
+#[[##    Range [ eg. atmega328p, cortex-m3 , f5f11 , stm32 ]     #]]
 set(MICROCONTROLLER "atmega328p")
 set(MCU_CPU_CLOCK "8000000UL")
 set(ROM_SIZE 1MB)
@@ -56,8 +56,9 @@ set(COMPILER_VERSION "14.1.0")
 #[[##    Range [ Your compiler path ]     #]]
 set(COMPILER_PATH "C:/msys64/ucrt64")
 # set(COMPILER_PATH "C:/WinAVR")
+# set(COMPILER_PATH "C:/WinARM")
 
-
+set(CMAKE_MAKE_PROGRAM "mingw32-make")
 
 
 ###############  Set Debbugger options ###############
@@ -66,7 +67,7 @@ set(CMAKE_DEBUG_TOOL_TYPE "GDB")
 
 
 #[[##    Range [ Your Debbugger path ]     #]]
-set(CMAKE_DEBUG_TOOL_PATH "C:/msys64/mingw64/bin")
+set(CMAKE_DEBUG_TOOL_PATH "C:/msys64/ucrt64")
 
 
 
@@ -77,7 +78,7 @@ set(CMAKE_FLASH_TOOL_TYPE "GDB")
 
 
 #[[##    Range [ Your Flasher path ]     #]]
-set(CMAKE_FLASH_TOOL_PATH "C:/msys64/mingw64/bin")
+set(CMAKE_FLASH_TOOL_PATH "C:/msys64/ucrt64")
 
 
 
@@ -92,7 +93,7 @@ set(PROJECT_CUSTOM_LINKER_FLAGS -ffunction-sections -Wall -Xlinker --gc-sections
 ###############  Set Linker script file ############### 
 # set(PROJECT_LINKER_FILE linker_script.ld)
 set(PROJECT_LINKER_FILE i386pep.x)
-
+# set(PROJECT_LINKER_FILE gcc.ld)
 
 
 
