@@ -54,9 +54,10 @@ set(COMPILER_TYPE "GCC-MINGW")
 set(COMPILER_VERSION "15.1.0")
 
 #[[##    Range [ Your compiler path ]     #]]
-set(COMPILER_PATH "C:/msys64/ucrt64")
+# set(COMPILER_PATH "C:/msys64/ucrt64")
 # set(COMPILER_PATH "C:/WinAVR")
 # set(COMPILER_PATH "C:/WinARM")
+
 
 set(CMAKE_MAKE_PROGRAM "mingw32-make")
 

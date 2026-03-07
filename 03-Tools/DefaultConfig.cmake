@@ -87,12 +87,6 @@ endif()
 
 ######################################## $COMPILER_TYPE check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED COMPILER_TYPE)
-    set(COMPILER_TYPE "WINDOWS")
-    set(COMPILER_PATH "C:/msys64/ucrt64")
-    message(WARNING " !!! COMPILER_TYPE is undefined, WINDOWS Comiler is selected  !!!  ")
-endif()
-
 if(NOT DEFINED COMPILER_TYPE)
 
     if(DEFINED ENV{GITHUB_ACTIONS})
