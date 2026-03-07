@@ -92,11 +92,31 @@ if (NOT DEFINED COMPILER_TYPE)
     set(COMPILER_PATH "C:/msys64/ucrt64")
     message(WARNING " !!! COMPILER_TYPE is undefined, WINDOWS Comiler is selected  !!!  ")
 endif()
+
+if(NOT DEFINED COMPILER_TYPE)
+
+    if(DEFINED ENV{GITHUB_ACTIONS})
+        message(STATUS "Running in GitHub CI - using system compiler")
+        set(COMPILER_PATH "")
+    else()
+        set(COMPILER_TYPE "WINDOWS")
+        set(COMPILER_PATH "C:/msys64/ucrt64")
+        message(WARNING "Local build detected - using MSYS compiler")
+    endif()
+
+endif()
 ######################################## $COMPILER_PATH check   #######################################
 ###  Set Compiler Specs
-if (NOT DEFINED COMPILER_PATH)
-    set(COMPILER_PATH "C:/msys64/ucrt64")
-    message(WARNING " !!!  COMPILER_PATH is undefined, WINDOWS Comiler is used !!!")   
+if(NOT DEFINED COMPILER_PATH)
+
+    if(DEFINED ENV{GITHUB_ACTIONS})
+        message(STATUS "Running in GitHub CI - using system compiler")
+        set(COMPILER_PATH "")
+    else()
+        message(WARNING "Local build detected - using MSYS compiler")
+        set(COMPILER_PATH "C:/msys64/ucrt64")
+    endif()
+
 endif()
 
 ######################################## $DEBUGGER_TYPE check   #######################################
