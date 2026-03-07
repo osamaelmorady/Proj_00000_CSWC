@@ -148,4 +148,6 @@ include(${PROJECT_TOOLS_FOLDER_DIR}/TargetSettings.cmake)
 
 
 
-
+############################ Unit Test Settings ########################
+### Include the GTest file
+include(${PROJECT_TOOLS_FOLDER_DIR}/CTestSetting.cmake)   

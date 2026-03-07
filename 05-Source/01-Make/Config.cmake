@@ -51,7 +51,7 @@ set(RAM_SIZE 65K)
 set(COMPILER_TYPE "GCC-MINGW")
 
 #[[##    Range [ Not Supported yet ]     #]]
-set(COMPILER_VERSION "14.1.0")
+set(COMPILER_VERSION "15.1.0")
 
 #[[##    Range [ Your compiler path ]     #]]
 set(COMPILER_PATH "C:/msys64/ucrt64")
@@ -84,8 +84,8 @@ set(CMAKE_FLASH_TOOL_PATH "C:/msys64/ucrt64")
 
 
 ###############  Set Compiler Flags ############### 
-set(PROJECT_CUSTOM_C_FLAGS   -fno-exception -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
-set(PROJECT_CUSTOM_CXX_FLAGS   -fno-exceptions -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
+set(PROJECT_CUSTOM_C_FLAGS   -fno-exception -O0 -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
+set(PROJECT_CUSTOM_CXX_FLAGS   -fno-exceptions -O0 -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax)
 set(PROJECT_CUSTOM_ASM_FLAGS )
 set(PROJECT_CUSTOM_LINKER_FLAGS -ffunction-sections -Wall -Xlinker --gc-sections --stats)
 
