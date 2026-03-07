@@ -192,6 +192,9 @@ add_custom_command(
 
 
 
+# set(LINK_GTEST_COMMAND target_link_directories(${PROJECT_TARGET} PRIVATE gtest_main))
+
+
 
 
 
@@ -214,3 +217,13 @@ add_custom_command(
 
 
 
+add_custom_command(
+    TARGET ${PROJECT_TARGET}
+    POST_BUILD
+    COMMAND echo ----- ---- ----  ---- ---- ---- ---- ---- ------
+    COMMAND echo ----- ---- ----   Generate GTest ----  ---- ----
+    COMMAND echo ----- ---- ----  ---- ---- ---- ---- ---- ------
+    COMMAND ${LINK_GTEST_COMMAND}
+    COMMAND echo ----- ---- ---- ---- ---- ---- ---- ---- ------
+    DEPENDS $<TARGET_FILE:${PROJECT_TARGET}>
+)
